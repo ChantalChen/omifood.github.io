@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniLalaPos</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/historyRecord.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="order">
+    <nav class="mainNav">
+        <div class="mainNavitem">
+            <div>
+                <lebel for="company">公司名稱:</lebel>
+                <lebel id="company"></lebel>
+            </div>
+            <div>
+                <lebel for="shift">班別:</lebel>
+                <lebel id="shift"></lebel>
+            </div>
+            <div>
+                <lebel for="cashier">收銀員:</lebel>
+                <lebel id="cashier"></lebel>
+            </div>
+        </div>
+        <a href="#" class="navBtn mainNavBtn">登出</a>
+    </nav>
+    <section>
+        <div class="recordHeader">
+            <form class="recordform">
+                <div>
+                    <label for="startdate" class="recordlabel">起始日期</label>
+                    <input id="startdate" type="datetime-local">
+                </div>
+                <div>
+                    <label for="enddate" class="recordlabel">結束日期</label>
+                    <input id="enddate" type="datetime-local">
+                </div>
+                <div>
+                    <label for="class" class="recordlabel">班別</label>
+                    <select class="recordselect">
+                        <option>早班</option>
+                        <option>中班</option>
+                        <option>晚班</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cashier" class="recordlabel">收銀員</label>
+                    <select class="recordselect">
+                        <option>請選擇收銀員</option>
+                        <option>林一零</option>
+                    </select>
+                </div>
+            </form>
+            <div class="formBtnBox">
+                <button class="recordBtn">查詢</button>
+            </div> 
+        </div>
+        <div class="recordtableBox">
+            <table class="recordtable">
+                <thead>
+                    <tr>
+                        <th>選擇</th>
+                        <th>日期</th>
+                        <th>時間</th>
+                        <th>班別</th>
+                        <th>收銀人員</th>
+                        <th>流水單號</th>
+                        <th>銷貨金額</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                       <td><input type="checkbox"></td>     
+                       <td>2023/05/31</td>     
+                       <td>14:34</td>     
+                       <td>晚班</td>     
+                       <td>林一零</td>     
+                       <td>20230531021</td>     
+                       <td>346</td>     
+                    </tr>
+                    <tr>
+                       <td><input type="checkbox"></td>     
+                       <td>2023/05/31</td>     
+                       <td>14:34</td>     
+                       <td>晚班</td>     
+                       <td>林一零</td>     
+                       <td>20230531021</td>     
+                       <td>346</td>     
+                    </tr>
+                </tbody> 
+            </table>
+            <div class="formBtnBox">
+                <button class="recordBtn" id="showDiaOneButton">檢視明細</button>
+            </div>
+        </div>
+         <!--PopUp  -->
+        <dialog id="diaOne" class="diaone">
+            <div class="recordPopUpBox">
+                <div class="recordPoptitle">
+                     <p class="date">2023/05/31</p>
+                     <p class="time">14:34</p>
+                     <p class="serialNumber">20230531021</p>
+                     <p class="class">晚班</p>
+                </div>
+                <form method="dialog">
+                    <button class="recordCloseicon"><ion-icon name="close-outline" ></ion-icon></button>
+                </form>
+                <div class="containerGrid">
+                     
+                    <div class="recordPopContainer">
+                        <div class="cashierBox">
+                            <p class="cashier">林一零</p>
+                        </div>
+                        <div class="tablebox">
+                            <table>
+                                 <thead>
+                                    <tr>
+                                        <th>品名規格</th>
+                                        <th>數量</th>
+                                        <th>單價</th>
+                                        <th>單件折扣</th>
+                                        <th>備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                 </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                 </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                 </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                 </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                 </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                 </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                </tbody>
+                                <tbody>
+                                    <tr>
+                                        <td>三明治</td>
+                                        <td>3</td>
+                                        <td>40</td>
+                                        <td>0</td>
+                                        <td>無</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <form class="form"> 
+                                <div>
+                                    <label for="amountOfMoney">消費金額</label>
+                                    <div class="checkoutMoneyBox">
+                                        <p class="amountOfMoney">346</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="discount">折扣</label>
+                                    <div class="checkoutMoneyBox">
+                                        <p class="discount">0</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="totalAmount">應收金額</label>
+                                    <div class="checkoutMoneyBox">
+                                        <p class="totalAmount">346</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>   
+                    </div>      
+                </div> 
+                <!-- 按lefticonBox即可切換資料 -->
+                <div class="lefticonBox">
+                    <button>
+                        <ion-icon name="chevron-back-outline" class="recordlefticon"></ion-icon>
+                    </button>
+                </div>  
+                <!-- 按righticonBox即可切換資料 -->
+                <div class="righticonBox">
+                    <button>
+                        <ion-icon name="chevron-forward-outline" class="recordrighticon"></ion-icon>
+                    </button>
+                </div>    
+                  
+            </div>
+        </dialog>
+    </section>      
+    <div class="menu">
+        <div class="menubtnBox">
+            <a href="/html/index.html" class="menubtn">
+                <img src="/img/moneyW.png" alt="結帳" class="menuicon">
+                <span class="menuitem">收銀作業</span>
+            </a>
+        </div>
+        <div class="menubtnBox">
+            <a href="#" class="menubtn">
+                <img src="/img/listW.png" alt="交易紀錄" class="menuicon">
+                <span class="menuitem">交易紀錄</span>
+            </a>
+        </div>
+        <div class="menubtnBox">    
+            <a href="/html/shiftPage.html" class="menubtn">
+                <img src="/img/transferW.png" alt="交班作業" class="menuicon">
+                <span class="menuitem">交班作業</span>
+            </a>
+        </div>
+    </div>  
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- popup -->
+    <script>
+        let btn=document.querySelector("#show");
+       let infoModal=document.querySelector("#infoModal");
+       let close=document.querySelector("#close");
+       btn.addEventListener("click", function(){
+       infoModal.showModal();
+       })
+       close.addEventListener("click", function(){
+       infoModal.close();
+       })
+   </script>
+   <script>
+    //取得第一個button
+    const showDiaOneButton = document.getElementById("showDiaOneButton");
+    //取得第一個對話視窗
+    const diaOne = document.getElementById("diaOne");
+    //將第一個button中加入監聽 "click" 這個事件動作 觸發後在diaOne中執行函式showModal()
+    showDiaOneButton.addEventListener("click", () => {
+    //顯示第一個對話視窗
+    diaOne.showModal();
+});
+   </script>
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>miniLalaPos</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/queries.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav">
+        <a href="/html/login.html" class="navBtn Btn">登入</a>
+    </nav>
+    <section class="sectionMain">
+        <div class="formBox">
+            <form class="form" action="#">
+                <div>
+                    <label for="company" class>公司代碼</label>
+                    <input id="company" type="text" required>
+                </div>
+                <div>
+                    <label for="class">班別</label>
+                    <select>
+                        <option value="">早班</option>
+                        <option value="">中班</option>
+                        <option value="">晚班</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="account" class>收銀人員</label>
+                    <input id="account" type="text" required>
+                </div>
+                <div>
+                    <label for="password" class>密碼</label>
+                    <input id="password" type="password" required>
+                </div>    
+            </form>
+            <div class="btnBox">
+                <button class="formBtn">登入</button>
+            </div>
+        </div>
+    </section>
+    <div class="menu"></div>
+    
+</body>
+</html>
